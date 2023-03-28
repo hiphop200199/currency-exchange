@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+@mixin title{
+    font-size: 12vw;
+    letter-spacing: 0.1vw;
+    text-shadow: 2px 0 1px 1px ;
+    &::first-letter{
+        font-size: 15vw;
+    }
+}
