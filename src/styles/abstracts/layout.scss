@@ -29,7 +29,21 @@
     & .label,& .input,& .button{
         margin-inline-end: 0.3vw;
     }
+    & .input{
+        outline: none;
+    }
+    & .button{
+        cursor: pointer;
+        margin-inline: 0.6vw;
+        transition: 0.6s;
+        &:hover{
+          box-shadow:  0 0 1px 1px c.$black;
+            transform: translateX(0.3vw);
+        }
+    }
     & .input,& .button{
         background-color: c.$transparent;
+        padding: 2px;
+        border: 1px ridge c.$black ;
     }
 }

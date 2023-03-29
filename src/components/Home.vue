@@ -56,6 +56,8 @@ getSymbols();*/
             <input class="input" type="text" name="" id="">
             <label class="label" for="">to: </label>
             <input class="input" type="text" name="" id="">
+            <label class="label" for="">amount: </label>
+            <input class="input" type="number" name="" id="">
             <button class="button">send</button>
             <p class="result">result: </p>
         </section>
