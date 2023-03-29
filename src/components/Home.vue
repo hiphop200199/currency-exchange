@@ -1,4 +1,5 @@
 <script setup>
+import Titles from '../tools/Titles.vue';
 /*import { ref } from 'vue';
 
 const options = {
@@ -27,8 +28,7 @@ getSymbols();*/
 
 <template>
   <div class="container">
-    <h1 class="title">Currency.</h1>
-    <h2 class="subtitle">information about exchange rates.</h2>
+  <Titles/>
    
         <section class="function">
             <h3 class="function-title">latest rate</h3>

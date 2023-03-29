@@ -1,5 +1,5 @@
-@use '../abstracts/layout.scss' as l;
+@use '../abstracts' as a;
 
 .container{
-    @include l.container();
+    @include a.container();
 }

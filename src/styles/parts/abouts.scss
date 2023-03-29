@@ -1,0 +1,6 @@
+@use '../abstracts/' as *;
+
+.about-area{
+    @include abouts();
+    @include paragraph();
+}
