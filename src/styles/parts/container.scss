@@ -1,0 +1,5 @@
+@use '../abstracts/layout.scss' as l;
+
+.container{
+    @include l.container();
+}

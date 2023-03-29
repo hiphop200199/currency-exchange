@@ -1,0 +1,10 @@
+@use '../abstracts/layout.scss' as l;
+
+.navbar{
+    @include l.navbar();
+}
+
+.link{
+    text-decoration: none;
+    margin-inline: 1vw;
+}

@@ -1,4 +1,22 @@
+@use './color.scss' as c;
+
 @mixin container{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     min-height: 100vh;
+    background-image: linear-gradient(135deg,c.$lightGrey,c.$grey);
+}
+
+@mixin navbar{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-inline-end: 1vw;
+    z-index: 1;
 }
