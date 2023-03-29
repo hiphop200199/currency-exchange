@@ -27,39 +27,39 @@ getSymbols();*/
 
 <template>
   <div class="container">
-    <h1 class="title">The Currency.</h1>
+    <h1 class="title">Currency.</h1>
     <h2 class="subtitle">information about exchange rates.</h2>
-    <section class="function-area">
+   
         <section class="function">
             <h3 class="function-title">latest rate</h3>
-            <label for="">from: </label>
-            <input type="text" name="" id="">
-            <label for="">to: </label>
-            <input type="text" name="" id="">
-            <button>send</button>
+            <label class="label" for="">from: </label>
+            <input class="input" type="text" name="" id="">
+            <label class="label" for="">to: </label>
+            <input class="input" type="text" name="" id="">
+            <button class="button">send</button>
             <p class="result">result: </p>
         </section>
         <section class="function">
             <h3 class="function-title">historical rate</h3>
-            <label for="">the date:</label>
-            <input type="date" name="" id="">
-            <label for="">from: </label>
-            <input type="text" name="" id="">
-            <label for="">to: </label>
-            <input type="text" name="" id="">
-            <button>send</button>
+            <label class="label" for="">the date:</label>
+            <input class="input" type="date" name="" id="">
+            <label class="label" for="">from: </label>
+            <input class="input" type="text" name="" id="">
+            <label class="label" for="">to: </label>
+            <input class="input" type="text" name="" id="">
+            <button class="button">send</button>
             <p class="result">result: </p>
         </section>
         <section class="function">
             <h3 class="function-title">convert</h3>
-            <label for="">from: </label>
-            <input type="text" name="" id="">
-            <label for="">to: </label>
-            <input type="text" name="" id="">
-            <button>send</button>
+            <label class="label" for="">from: </label>
+            <input class="input" type="text" name="" id="">
+            <label class="label" for="">to: </label>
+            <input class="input" type="text" name="" id="">
+            <button class="button">send</button>
             <p class="result">result: </p>
         </section>
-    </section>
+   
   </div>
 </template>
 

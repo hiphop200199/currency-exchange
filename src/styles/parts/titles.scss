@@ -1,0 +1,9 @@
+@use '../abstracts/index.scss' as *;
+
+.title{
+    @include title();
+}
+
+.subtitle{
+    @include subtitle();
+}

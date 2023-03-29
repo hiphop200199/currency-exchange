@@ -7,6 +7,7 @@
     justify-content: space-around;
     min-height: 100vh;
     background-image: linear-gradient(135deg,c.$lightGrey,c.$grey);
+    padding: 1vmax;
 }
 
 @mixin navbar{
@@ -19,4 +20,16 @@
     align-items: flex-end;
     padding-inline-end: 1vw;
     z-index: 1;
+}
+
+@mixin function{
+    & *{
+        margin-block: 0.5vh;
+    }
+    & .label,& .input,& .button{
+        margin-inline-end: 0.3vw;
+    }
+    & .input,& .button{
+        background-color: c.$transparent;
+    }
 }

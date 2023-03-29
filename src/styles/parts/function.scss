@@ -1,0 +1,6 @@
+@use '../abstracts/' as a;
+
+.function{
+    @include a.function();
+    @include a.functionWords();
+}

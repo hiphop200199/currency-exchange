@@ -1,4 +1,4 @@
-
+@use './color.scss' as c;
 
 
 
@@ -6,18 +6,24 @@
   
     font-size: 12vw;
     letter-spacing: 0.1vw;
-    text-shadow: 2px 0 1px 1px ;
+    -webkit-box-reflect: below -160px linear-gradient(to bottom,c.$transparent,c.$halfTransparent);
     &::first-letter{
         font-size: 15vw;
     }
 }
 
 @mixin subtitle{
-  
-    font-size: 3vw;
+    letter-spacing: 0.1vw;
+    font-size: 2.5vw;
 }
 
 @mixin link{
-  
+    text-shadow: 1px 0 1px  c.$lightGrey;
     font-size: 2vw;
+}
+
+@mixin functionWords{
+   & .function-title,& .label,& .input,& .button,& .result{
+    font-size: 1.5vw;
+   }
 }

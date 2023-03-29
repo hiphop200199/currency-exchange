@@ -1,10 +1,16 @@
-@use '../abstracts/layout.scss' as l;
+@use '../abstracts/index.scss' as a;
 
 .navbar{
-    @include l.navbar();
+    @include a.navbar();
 }
 
 .link{
+    @include a.link();
+    cursor: pointer;
     text-decoration: none;
     margin-inline: 1vw;
+    transition: 0.6s;
+    &:hover{
+        transform: translateX(0.3vw);
+    }
 }
