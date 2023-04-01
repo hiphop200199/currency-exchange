@@ -1,6 +1,7 @@
 <script setup>
-/*
+
 import Titles from '../tools/Titles.vue';
+
 import { ref } from 'vue';
 
 const options = {
@@ -22,7 +23,7 @@ const historyResult=ref("");
 const convertFrom=ref("");
 const convertTo=ref("");
 const convertResult=ref("");
-const amount=ref(0);
+const number=ref(0);
 async function getSymbols(){
     const res = await fetch(
     "https://currency-conversion-and-exchange-rates.p.rapidapi.com/symbols",
@@ -31,38 +32,41 @@ async function getSymbols(){
 
   const finalRes = await res.json();
 
-  data.value=Object.keys(finalRes.symbols).sort;
+  for(let key in finalRes.symbols){
+    data.value.push(key);
+  }
+  data.value.sort();
 }
 
 async function getLatest(){
-  const res = await fetch(`https://currency-conversion-and-exchange-rates.p.rapidapi.com/latest?base=${latestFrom}&to=${latestTo}`, options);
+  const res = await fetch(`https://currency-conversion-and-exchange-rates.p.rapidapi.com/latest?base=${latestFrom.value}&to=${latestTo.value}`, options);
 
   const finalRes = await res.json();
 
-  latestResult.value=finalRes.rates.latestTo;
+  latestResult.value=finalRes.rates[latestTo.value];
 }
 async function getHistory(){
-  const res = await fetch(`https://currency-conversion-and-exchange-rates.p.rapidapi.com/${date}?base=${historyFrom}&to=${historyTo}`, options);
+  const res = await fetch(`https://currency-conversion-and-exchange-rates.p.rapidapi.com/${date.value}?base=${historyFrom.value}&to=${historyTo.value}`, options);
 
   const finalRes = await res.json();
 
-  historyResult.value=finalRes.rates.historyTo;
+  historyResult.value=finalRes.rates[historyTo.value];
 }
 async function getConvert(){
-  const res = await fetch(`https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?from=${convertFrom}&to=${convertTo}&amount=${amount.toString()}`, options);
-
+  const res = await fetch(`https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?from=${convertFrom.value}&to=${convertTo.value}&amount=${number.value}`, options);
+ 
   const finalRes = await res.json();
 
 convertResult.value= finalRes.result;
 }
 
 getSymbols();
-*/
+
 </script>
 
 <template>
   <div class="container">
-  <Titles/>
+  <Titles subtitle="information about exchange rates."/>
    
         <section class="function">
             <h3 class="function-title">latest rate</h3>
@@ -91,7 +95,7 @@ getSymbols();
             <label class="label">to: </label>
             <input class="input" type="text" list="symbols" v-model="convertTo">
             <label class="label">amount: </label>
-            <input class="input" type="number" min="0" v-model="amount">
+            <input class="input" type="number" min="0" v-model="number">
             <button class="button" @click="getConvert">send</button>
             <p class="result">result: {{ convertResult }}</p>
         </section>

@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+
+
+.table{
+@include table();
+@include tableFonts();
+}

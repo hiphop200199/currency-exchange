@@ -39,3 +39,17 @@
     }
    
 }
+
+@mixin tableFonts{
+    letter-spacing: 0.1vw;
+    & th{
+        font-size: 1.8vw;
+        &::first-letter{
+            text-transform: uppercase;
+            font-size: 1.9vw;
+        }
+    }
+    & td{
+        font-size: 1.5vw;
+    }
+}

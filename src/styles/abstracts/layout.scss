@@ -81,3 +81,20 @@
         }
     }
 }
+
+@mixin table{
+    margin-block-start: 30px;
+    border-collapse: collapse;
+    border: 1px solid c.$black;
+   width: 60vw;
+   & th,& td{
+    width: 30vw;
+    text-align: center;
+    border-block-end: 1px solid c.$black;
+    padding: 5px;
+    &:nth-child(2n+1){
+        border-inline-end:1px solid c.$black ;
+    }
+   }
+   
+}

@@ -14,3 +14,14 @@
         transform: translateX(0.3vw);
     }
 }
+.to-top{
+    @include a.link();
+    position: absolute;
+    left: 94%;
+    top: 99%;
+    text-decoration: none;
+    transition: 0.6s;
+    &:hover{
+        transform: translateX(0.3vw);
+    }
+}
