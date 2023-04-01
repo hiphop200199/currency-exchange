@@ -6,7 +6,8 @@ import Reference from '../components/Reference.vue'
 const routes = [
   {path: "/", name: "Home", component: Home},
   {path: "/about", name: "About", component: About},
-  {path:"/reference",name:"Reference",component:Reference}
+  {path:"/reference",name:"Reference",component:Reference},
+  {path: '*',name: 'catchAll',component: Home}
 ]
 
 const router = createRouter({
