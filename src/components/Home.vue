@@ -70,32 +70,48 @@ getSymbols();
    
         <section class="function">
             <h3 class="function-title">latest rate</h3>
+            <span class="input-area">
             <label class="label">from: </label>
             <input class="input" type="text" list="symbols" v-model="latestFrom">
+            </span>
+            <span class="input-area">
             <label class="label">to: </label>
             <input class="input" type="text" list="symbols" v-model="latestTo">
+          </span>
             <button class="button" @click="getLatest">send</button>
             <p class="result">result: {{latestResult}}</p>
         </section>
         <section class="function">
             <h3 class="function-title">historical rate</h3>
+            <span class="input-area">
             <label class="label">the date:</label>
             <input class="input" type="date" v-model="date">
+          </span>
+          <span class="input-area">
             <label class="label">from: </label>
             <input class="input" type="text" list="symbols" v-model="historyFrom">
+          </span>
+          <span class="input-area">
             <label class="label">to: </label>
             <input class="input" type="text" list="symbols" v-model="historyTo">
+          </span>
             <button class="button" @click="getHistory">send</button>
             <p class="result">result: {{historyResult}}</p>
         </section>
         <section class="function">
             <h3 class="function-title">convert</h3>
+            <span class="input-area">
             <label class="label">from: </label>
             <input class="input" type="text" list="symbols" v-model="convertFrom">
+          </span>
+          <span class="input-area">
             <label class="label">to: </label>
             <input class="input" type="text" list="symbols" v-model="convertTo">
+          </span>
+            <span class="input-area">
             <label class="label">amount: </label>
             <input class="input" type="number" min="0" v-model="number">
+          </span>
             <button class="button" @click="getConvert">send</button>
             <p class="result">result: {{ convertResult }}</p>
         </section>

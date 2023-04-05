@@ -4,3 +4,23 @@
     @include a.function();
     @include a.functionWords();
 }
+
+@media screen and (width<=992px){
+    .function{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-block: 2vh;
+        & .input-area{
+            width: 100%;
+            text-align: center;
+        }
+        & .function-title,& .label,& .input,& .button,& .result{
+            font-size: 4vw;
+           }
+        & .input:not([type=date]){
+            width: 25%;
+        }   
+    }
+}

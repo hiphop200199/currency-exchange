@@ -25,3 +25,15 @@
         transform: translateX(0.3vw);
     }
 }
+
+@media screen and (width<=992px){
+    .navbar{
+        align-items: flex-start;
+    }
+    .link{
+        font-size: 3.5vw;
+    }
+    .to-top{
+        font-size: 3vw;
+    }
+}

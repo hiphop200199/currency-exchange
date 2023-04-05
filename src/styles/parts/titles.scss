@@ -7,3 +7,15 @@
 .subtitle{
     @include subtitle();
 }
+
+@media screen and (width<=992px){
+    .title{
+        font-size: 14vw;
+        &::first-letter{
+            font-size: 15vw;
+        }
+    }
+    .subtitle{
+        font-size: 5vw;
+    }
+}

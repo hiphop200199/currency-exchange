@@ -3,3 +3,10 @@
 .container{
     @include a.container();
 }
+
+@media screen and (width<=992px){
+    .container{
+        align-items: center;
+       
+    }
+}
