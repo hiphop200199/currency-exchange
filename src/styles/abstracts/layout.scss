@@ -24,7 +24,7 @@
 
 @mixin function{
     & *{
-        margin-block: 0.5vh;
+        margin-block: 0.3vh;
     }
     & .label,& .input,& .button{
         margin-inline-end: 0.3vw;
